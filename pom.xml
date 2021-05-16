@@ -18,12 +18,13 @@
 		<spring-cloud.version>Hoxton.SR11</spring-cloud.version>
 	</properties>
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/com.samco/framework -->
 		<dependency>
-	        <groupId>io.samco</groupId>
-	        <artifactId>stocknote-bridge-java</artifactId>
-	        <version>1.0.0</version>
-        </dependency>
-        
+		    <groupId>com.samco</groupId>
+		    <artifactId>framework</artifactId>
+		    <version>1.0.0</version>
+		</dependency>
+
         <!-- lombok and swagger -->
         <dependency>
 			<groupId>org.projectlombok</groupId>
