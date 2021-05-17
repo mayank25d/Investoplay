@@ -9,7 +9,7 @@ services:
     # Configuration for building the docker image for the backend service
     build: .
     ports:
-      - "8080:80"
+      - "8081:80"
     restart: always
     depends_on: 
       - db # This service depends on mysql. Start that first.
