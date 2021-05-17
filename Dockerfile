@@ -18,6 +18,7 @@ RUN chmod +x ./mvnw
 # RUN mvn install:install-file -Dfile="target/stocknote-bridge-java-1.0.1.jar" -DgroupId=io.samco -DartifactId=stocknote-bridge-java -Dversion=1.0.1 -Dpackaging=jar
 RUN ./mvnw dependency:go-offline -B
 
+RUN mvn -f pom.xml clean install
 # Copy the project source
 COPY src src
 
