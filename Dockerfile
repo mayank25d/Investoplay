@@ -15,6 +15,11 @@ COPY pom.xml .
 # This is a separate step so the dependencies will be cached unless 
 # the pom.xml file has changed.
 RUN chmod +x ./mvnw
+RUN sudo yum update -y
+RUN sudo yum install wget
+RUN sudo wget https://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
+RUN sudo sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
+RUN sudo yum install -y apache-maven
 RUN mvn --version
 RUN mvn install:install-file -Dfile="./stocknote-bridge-java-1.0.1.jar" -DgroupId=io.samco -DartifactId=stocknote-bridge-java -Dversion=1.0.1 -Dpackaging=jar
 RUN ./mvnw dependency:go-offline -B
