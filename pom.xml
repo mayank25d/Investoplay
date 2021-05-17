@@ -19,12 +19,10 @@
 	</properties>
 	<dependencies>
 		<dependency>
-		    <groupId>io.samco</groupId>
-		    <artifactId>stocknote-bridge-java</artifactId>
-		    <version>1.0.1</version>
-		    <scope>system</scope>
-		    <systemPath>${basedir}/stocknote-bridge-java-1.0.1.jar</systemPath>
-		</dependency>
+	        <groupId>io.samco</groupId>
+	        <artifactId>stocknote-bridge-java</artifactId>
+	        <version>1.0.0</version>
+        </dependency>
         
         <!-- lombok and swagger -->
         <dependency>
