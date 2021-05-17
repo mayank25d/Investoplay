@@ -16,7 +16,7 @@ COPY pom.xml .
 # the pom.xml file has changed.
 RUN chmod +x ./mvnw
 # RUN mvn install:install-file -Dfile="target/stocknote-bridge-java-1.0.1.jar" -DgroupId=io.samco -DartifactId=stocknote-bridge-java -Dversion=1.0.1 -Dpackaging=jar
-ENV MAVEN_CONFIG "/root/.m2"
+ENV unset MAVEN_CONFIG
 RUN ./mvnw dependency:go-offline -B
 
 # Copy the project source
